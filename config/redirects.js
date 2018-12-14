@@ -897,14 +897,6 @@ module.exports = [
     to: '/security/blacklisting-attributes'
   },
   {
-    from: '/brute-force-protection',
-    to: '/anomaly-detection/brute-force-protection'
-  },
-  {
-    from: '/breached-password',
-    to: '/anomaly-detection/breached-passwords'
-  },
-  {
     from: '/office365-deprecated',
     to: '/tutorials/office365-connection-deprecation-guide'
   },
@@ -1046,80 +1038,12 @@ module.exports = [
     to: '/identityproviders'
   },
   {
-    from: '/anomaly-detection/brute-force-protection',
-    to: '/anomaly-detection#brute-force-protection'
-  },
-  {
     from: '/libraries/lock-android/error-messages',
     to: '/libraries/error-messages'
   },
   {
     from: '/api-auth/grant/using-rules',
     to: '/api-auth/tutorials/client-credentials/customize-with-hooks'
-  },
-  {
-    from: '/auth0-hooks',
-    to: '/hooks'
-  },
-  {
-    from: '/auth0-hooks/cli/create-delete',
-    to: '/hooks/cli/create-delete'
-  },
-  {
-    from: '/auth0-hooks/cli/edit',
-    to: '/hooks/cli/edit'
-  },
-  {
-    from: '/auth0-hooks/cli/enable-disable',
-    to: '/hooks/cli/enable-disable'
-  },
-  {
-    from: '/auth0-hooks/cli',
-    to: '/hooks/cli'
-  },
-  {
-    from: '/auth0-hooks/cli/logs',
-    to: '/hooks/cli/logs'
-  },
-  {
-    from: '/auth0-hooks/dashboard',
-    to: '/hooks/dashboard'
-  },
-  {
-    from: '/auth0-hooks/dashboard/create-delete',
-    to: '/hooks/dashboard/create-delete'
-  },
-  {
-    from: '/auth0-hooks/dashboard/edit',
-    to: '/hooks/dashboard/edit'
-  },
-  {
-    from: '/auth0-hooks/dashboard/enable-disable',
-    to: '/hooks/dashboard/enable-disable'
-  },
-  {
-    from: '/auth0-hooks/extensibility-points',
-    to: '/hooks/extensibility-points'
-  },
-  {
-    from: '/auth0-hooks/extensibility-points/client-credentials-exchange',
-    to: '/hooks/extensibility-points/client-credentials-exchange'
-  },
-  {
-    from: '/auth0-hooks/extensibility-points/credentials-exchange',
-    to: '/hooks/extensibility-points/credentials-exchange'
-  },
-  {
-    from: '/auth0-hooks/extensibility-points/post-user-registration',
-    to: '/hooks/extensibility-points/post-user-registration'
-  },
-  {
-    from: '/auth0-hooks/extensibility-points/pre-user-registration',
-    to: '/hooks/extensibility-points/pre-user-registration'
-  },
-  {
-    from: '/auth0-hooks/overview',
-    to: '/hooks/overview'
   },
   {
     from: '/libraries/lock-ios/delegation-api',
@@ -1550,8 +1474,8 @@ module.exports = [
     to: '/users/guides/get-user-information-with-unbounce-landing-pages',
   },
   {
-    from: '/tutorials/bulk-importing-users-into-auth0',
-    to: '/users/migrations/bulk-import',
+    from: ['/tutorials/bulk-importing-users-into-auth0', '/users/migrations/bulk-import'],
+    to: '/users/guides/bulk-user-import',
   },
   {
     from: '/tutorials/using-auth0-as-an-identity-provider-with-github-enterprise',
@@ -1654,16 +1578,16 @@ module.exports = [
     to: '/i18n'
   },
   {
-    from: '/users/bulk-importing-users-into-auth0',
-    to: '/users/migrations/bulk-import'
+    from: ['/users/bulk-importing-users-into-auth0', '/users/migrations/bulk-import'],
+    to: '/users/guides/bulk-user-import'
   },
   {
-    from: '/connections/database/migrating',
-    to: '/users/migrations/automatic'
+    from: ['/connections/database/migrating', '/users/migrations/automatic'],
+    to: '/users/guides/configure-automatic-migration'
   },
   {
-    from: '/connections/database/migrating-okta',
-    to: '/users/migrations/okta'
+    from: ['/connections/database/migrating-okta', '/users/migrations/okta'],
+    to: '/users/references/user-migration-scenarios'
   },
   {
     from: `/metadata/management-api`,
@@ -1889,10 +1813,6 @@ module.exports = [
      from: '/user-profile',
      to: '/users/concepts/overview-user-profile'
    },
-   {
-     from: '/users',
-     to: '/users/concepts/overview-users'
-   },
   //  {
   //    from: '/user-profile#block-and-unblock-a-user',
   //    to: '/users/guides/block-and-unblock-users'
@@ -1960,9 +1880,98 @@ module.exports = [
    {
      from: '/metadata/apis',
      to: '/users/guides/manage-user-metadata'
-   }
+   },
+   {
+     from: '/metadata/lock',
+     to: '/users/guides/manage-user-metadata'
+   },
+   {
+     from: '/hooks/cli/edit',
+     to: '/hooks/guides/edit-hooks-using-cli'
+   },
+   {
+     from: '/hooks/cli/enable-disable',
+      to: '/hooks/guides/enable-disable-hooks-using-cli'
+   },
+   {
+     from: '/hooks/cli/logs',
+     to: '/hooks/guides/logging-hooks-using-cli'
+   },
+   {
+     from: '/hooks/cli',
+     to: '/hooks'
+   },
+   {
+     from: '/multifactor-authentication/yubikey',
+     to: '/multifactor-authentication'
+   },
+   {
+     from: '/hooks/dashboard/create-delete',
+     to: '/hooks/guides/create-hooks-using-dashboard'
+   },
+   {
+     from: ['/libraries/lock/v10/auth0js', '/libraries/lock/v11/auth0js'],
+     to: '/libraries/auth0js'
+   },
   //  {
   //    from: '/metadata/lock',
   //    to: '/users/guides/manage-user-metadata'
   //  }
+  {
+    from: '/hooks/cli/create-delete',
+    to: '/hooks/guides/create-hooks-using-cli'
+   },
+   {
+    from: '/hooks/cli/edit',
+    to: '/hooks/guides/edit-hooks-using-cli'
+   },
+   {
+    from: '/hooks/cli/enable-disable',
+    to: '/hooks/guides/enable-disable-hooks-using-cli'
+   },
+   {
+    from: '/hooks/cli/index',
+    to: '/hooks'
+   },
+   {
+    from: '/hooks/cli/logs',
+    to: '/hooks/guides/logging-hooks-using-cli'
+   },
+   {
+    from: '/hooks/dashboard/create-delete',
+    to: '/hooks/guides/create-hooks-using-dashboard'
+   },
+   {
+    from: '/hooks/dashboard/edit',
+    to: '/hooks/guides/edit-hooks-using-dashboard'
+   },
+   {
+    from: '/hooks/dashboard/enable-disable',
+    to: '/hooks/guides/enable-disable-hooks-using-dashboard'
+   },
+   {
+    from: '/hooks/dashboard/index',
+    to: '/hooks'
+  },
+   {
+    from: '/hooks/extensibility-points/credentials-exchange',
+    to: '/hooks/concepts/credentials-exchange-extensibility-point'
+   },
+   {
+    from: '/hooks/extensibility-points/index',
+    to: '/hooks'
+   },
+   {
+    from: '/hooks/extensibility-points/post-user-registration',
+    to: '/hooks/concepts/post-user-registration-extensibility-point'
+   },
+   {
+    from: '/hooks/extensibility-points/pre-user-registration',
+    to: '/hooks/concepts/pre-user-registration-extensibility-point'
+   },
+   {
+    from: '/hooks/overview',
+    to: '/hooks'
+   }
 ];
+

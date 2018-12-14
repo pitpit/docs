@@ -1,5 +1,5 @@
 ---
-description: How to update user profiles when using your own database as an identity provider.
+description: Learn how to update user profiles when using your own database as an identity provider.
 topics:
     - updating-users
     - user-management
@@ -14,11 +14,11 @@ v2: true
 
 # Update User Profiles Using Your Database
 
-You can update user profiles when using [your own database as an identity provider](/connections/database/custom-db) by:
+Update user profiles when using [your own database as an identity provider](/connections/database/custom-db) by doing the following tasks:
 
-* Using the [Management API](/api/management/v2#!/Users/patch_users_by_id).
-* Updating the user in your database.
-* [Enabling user migration](/users/migrations/automatic) from your database to Auth0.
+* Use the [Management API](/api/management/v2#!/Users/patch_users_by_id).
+* Update the user in your database.
+* [Configure user migration](/users/guides/configure-automatic-migration) from your database to Auth0.
 
 ## Update users with the Management API
 
@@ -51,7 +51,7 @@ Once a user has been migrated, you will also be able to update fields such as `e
 
 Auth0 caches the user profile received from a [database connection](/connections/database) before sending it to the client application. This cache is stored in the Auth0 database and is refreshed each time the user authenticates.
 
-The cached values for the [Normalized User Profile](/users/normalized) fields are based on the values returned from the Login Script of your custom database connection.
+The cached values for the [Normalized User Profile](/users/normalized/auth0/normalized-user-profile-schema) fields are based on the values returned from the Login Script of your custom database connection.
 
 The User Profile is cached for several reasons. First, caching allows you the option of implementing [Single Sign-On](/sso) at the Auth0 layer to avoid going to the Connection for every request. Additionally, this provides resilience if a Connection is temporarily unavailable.
 

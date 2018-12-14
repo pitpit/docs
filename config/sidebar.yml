@@ -378,16 +378,42 @@ articles:
         url: "/connections/database/password-strength"
 
   - title: "User Management"
-    url: "/users/concepts/overview-users"
+    url: "/users"
     children:
       - title: "User Profiles"
         url: "/users/concepts/overview-user-profile"
         children:
+
           - title: "Structure"
             url: "/users/references/user-profile-structure"
 
-          - title: "Normalized User Profile"
+          - title: "Normalized User Profiles"
             url: "/users/normalized/auth0"
+            children:
+
+              - title: "Identify Users"
+                url: "/users/normalized/auth0/identify-users"
+                hidden: true 
+
+              - title: "Retrieve User Profiles"
+                url: "/users/normalized/auth0/retrieve-user-profiles"
+                hidden: true 
+
+              - title: "Store User Data"
+                url: "/users/normalized/auth0/store-user-data"
+                hidden: true 
+
+              - title: "Normalized User Profile Schema"
+                url: "/users/normalized/auth0/normalized-user-profile-schema"
+                hidden: true 
+                
+              - title: "Sample User Profiles"
+                url: "/users/normalized/auth0/sample-user-profiles"
+                hidden: true   
+
+              - title: "OIDC-Compliant Pipelines"  
+                url: "/users/normalized/oidc"
+                hidden: true 
 
           - title: "Link Accounts"
             url: "/link-accounts"
@@ -452,29 +478,26 @@ articles:
         hidden: true
 
       - title: "User Migration"
-        url: "/users/migrations"
+        url: "/users/concepts/overview-user-migration"
         children:
           - title: "Automatic Migration"
-            url: "/users/migrations/automatic"
+            url: "/users/guides/configure-automatic-migration"
 
           - title: "Bulk Migration"
-            url: "/users/migrations/bulk-import"
+            url: "/users/guides/bulk-user-import"
 
           - title: "User Import/Export Extension"
             url: "/extensions/user-import-export"
 
-          - title: "Gigya"
-            url: "/users/migrations/gigya"
-
-          - title: "Okta"
-            url: "/users/migrations/okta"
-
-          - title: "Stormpath"
-            url: "/users/migrations/stormpath"
+          - title: "Scenarios"
+            url: "/users/references/user-migration-scenarios"
 
           - title: "Azure Access Control"
-            url: "/users/migrations/azure-access-control"
+            url: "/users/guides/azure-access-control"
             hidden: true
+
+          - title: "Import File Schema"
+            url: "/users/references/bulk-import-database-schema-examples"
  
       - title: "Redirect Users"
         url: "/users/guides/redirect-users-after-login"
@@ -509,54 +532,30 @@ articles:
             hidden: true
 
 
-  - title: "Multifactor Authentication"
+  - title: "Multi-factor Authentication"
     url: "/multifactor-authentication"
     children:
       - title: "Overview"
         url: "/multifactor-authentication"
 
-      - title: "Guardian"
-        url: "/multifactor-authentication/guardian"
+      - title: "Factors"
+        url: "/multifactor-authentication/factors"
         children:
-          - title: "For Administrators"
-            url: "/multifactor-authentication/administrator"
+          - title: "Push"
+            url: "/multifactor-authentication/factors/push"
 
-          - title: "For Developers"
-            url: "/multifactor-authentication/developer"
+          - title: "One Time Passwords"
+            url: "/multifactor-authentication/factors/otp"
 
-          - title: "For Users"
-            url: "/multifactor-authentication/guardian/user-guide"
+          - title: "SMS"
+            url: "/multifactor-authentication/factors/sms"
 
-      - title: "Google Authenticator"
-        url: "/multifactor-authentication/google-authenticator"
-        children:
-          - title: "For Administrators"
-            url: "/multifactor-authentication/google-auth/admin-guide"
-
-          - title: "For Developers"
-            url: "/multifactor-authentication/google-auth/dev-guide"
-
-          - title: "For Users"
-            url: "/multifactor-authentication/google-auth/user-guide"
-
-      - title: "Duo Security"
-        url: "/multifactor-authentication/duo"
-        children:
-          - title: "For Administrators"
-            url: "/multifactor-authentication/duo/admin-guide"
-
-          - title: "For Developers"
-            url: "/multifactor-authentication/duo/dev-guide"
-
-          - title: "For Users"
-            url: "/multifactor-authentication/duo/user-guide"
+          - title: "Duo"
+            url: "/multifactor-authentication/factors/duo"
 
       - title: "Custom MFA"
         url: "/multifactor-authentication/custom"
 
-      - title: "Yubikey NEO Example"
-        url: "/multifactor-authentication/yubikey"
-        
       - title: "Step-up Authentication"
         url: "/multifactor-authentication/step-up-authentication"
         children:
@@ -568,7 +567,7 @@ articles:
             url: "/multifactor-authentication/step-up-authentication/step-up-for-apis"
             hidden: true
 
-      - title: "API"
+      - title: "MFA API"
         url: "/multifactor-authentication/api"
         children:
           - title: "Trigger MFA"
@@ -634,8 +633,32 @@ articles:
       - title: "Overview"
         url: "/anomaly-detection"
 
-      - title: "Breached Passwords"
-        url: "/anomaly-detection/breached-passwords"
+      - title: "Breached Password Security"
+        url: "/anomaly-detection/concepts/breached-passwords"
+
+      - title: "Set Preferences"
+        url: "/anomaly-detection/guides/set-anomaly-detection-preferences"
+
+      - title: "Customize Emails"
+        url: "/anomaly-detection/guides/customize-blocked-account-emails" 
+
+      - title: "Enable and Disable Brute Force Protection"
+        url: "/anomaly-detection/guides/enable-disable-brute-force-protection"
+        hidden: true
+
+      - title: "Breached Password Detection Triggers"
+        url: "/anomaly-detection/references/breached-password-detection-triggers-actions"
+        hidden: true
+
+      - title: "Brute-Force Protection Triggers"
+        url: "/anomaly-detection/references/brute-force-protection-triggers-actions"
+        hidden: true 
+
+      - title: "Restrictions and Limitations"
+        url: "/anomaly-detection/references/anomaly-detection-restrictions-limitations"
+
+      - title: "FAQs"
+        url: "/anomaly-detection/references/anomaly-detection-faqs"    
 
   - title: "Analytics"
     url: "/analytics/integrations"
@@ -1029,9 +1052,6 @@ libraries:
 
       - title: "Customizing Errors"
         url: "/libraries/lock/v11/customizing-error-messages"
-
-      - title: "Lock with auth0.js"
-        url: "/libraries/lock/v11/auth0js"
 
       - title: "Authentication Modes"
         url: "/libraries/lock/v11/authentication-modes"
